@@ -34,7 +34,7 @@ A collection, like any well-designed object, is an abstraction. A collection def
 
 A class that implements the collection's interface must fullfill the conceptual definition of the collection, but it can do so in many ways.
 
-![ADT's operations]("./img/ADT_operations.png")
+![ADT's operations](img/ADT_operations.png)
 
 > Frank M. Carrano, Timothy Henry,  Data Abstraction & Problem Solving with C++:Walls and Mirrors, Person, 2012.
 
@@ -63,5 +63,44 @@ A data type is a group of **values** and the **operations** defined on those val
 #### Abstract data type
 An abstract data type (ADT) is a data type whose **values** and **operations** are not inherently defined within a programming language. It is **abstract** only in that the details of its implementation *must be defined* nad should be hidden from the user.
 
+
+## Stack
+A stack is a linear collection whose elements are added and removed from the same end. We say that a stack is processed in a **last in, first out (LIFO)** manner.
+
+### Aplication
+In fact, one of the principal uses of a stack in computing is to reverse the order of something (e.g an undo operation).
+
+Use postfix, the order of the values and operators in the expression is sufficient to determine the resuldo, for this reason programming language compilers and run-time enviromments often use posfix expresssion in their internal calculations.
+
+### Operation
+* push
+* pop
+* peek
+* isEmpty
+* size
+
+Keep in mind that the definition of a collection is not universal. You will find varitions in the operations defined for specific data structurefrom one text to another. Also sometimes there are variations on the namming conventions for the operetions on a collection. 
+
+### Note
+If pop or peek operation is requested on an empty stack throw a error.
+
+### Using stacks: Evaluation Postfix Expression
+#Rules
+Scanning from left to right, apply eah operation to the two operands inmediately proceding it, and replace the operator with the result. At the end we are left with the final values of the expression.
+
+### Algorithm
+The algorithm for evaluating a postfix expression using a stack
+can be expressed as follows: Scan the expression from left to right, identifying
+each token (operator or operand) in turn. If it is an operand, push it onto the
+stack. If it is an operator, pop the top two elements off the stack, apply the opera-
+tion to them, and push the result onto the stack. When we reach the end of the
+expression, the element remaining on the stack is the result of the expression. 
+
+### Note
+If at any
+point we attempt to pop two elements off the stack but there are not two elements on
+the stack, then our postfix expression was not properly formed. Similarly, if we
+reach the end of the expression and more than one element remains on the stack,
+then our expression was not well formed.
 
 
