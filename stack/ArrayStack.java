@@ -13,11 +13,11 @@ public class ArrayStack<T> implements Stack<T>{
 
     //Defining for our.
     public ArrayStack(int capacity){
-	stack =(T[])(new Object[capacity]); //No puede inicializar Genericos, por lo tanto usaremos un casteo de Objects.
+	stack =(T[])(new Object[capacity]); //No se puede inicializar Genericos, por lo tanto usaremos un casteo de Genericos.
 	top = 0;
     }
     
-    //Estos los medodos fundamentales por definicion de la pila.
+    //Estos los metodos fundamentales por definicion de la pila.
     //Va agreagar a la pila.
     public void push(T element){
 	//Tenemos que fijarnos que no este llena;

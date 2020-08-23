@@ -1,7 +1,7 @@
-
+/** Interfaz Stack **/
 public interface Stack<T>{
 
-    //Estos los medodos fundamentales por definicion de la pila.
+    //Estos los metodos fundamentales por definicion de la pila.
     //Va agreagar a la pila.
     public void push(T element);
     //Va devolver el elemento de top de la pila.
